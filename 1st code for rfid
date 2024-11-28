@@ -1,0 +1,53 @@
+#include <SPI.h>
+#include <MFRC522.h>
+
+// Define the pins used for the RFID-RC522 module
+#define SS_PIN  5  // SDA pin
+#define RST_PIN 4  // RST pin
+
+// Create an MFRC522 object
+MFRC522 rfid(SS_PIN, RST_PIN);
+
+void setup() {
+  // Start the Serial Monitor
+  Serial.begin(115200);
+  Serial.println("Initializing RFID Reader...");
+
+  // Initialize the SPI bus
+  SPI.begin();
+
+  // Initialize the MFRC522 module
+  rfid.PCD_Init();
+  Serial.println("RFID Reader Initialized.");
+  Serial.println("Place an RFID card near the reader.");
+}
+
+void loop() {
+  // Check if a new card is present
+  if (!rfid.PICC_IsNewCardPresent()) {
+    delay(100);
+    return;
+  }
+
+  // Read the card's serial number
+  if (!rfid.PICC_ReadCardSerial()) {
+    Serial.println("Failed to read the card.");
+    delay(100);
+    return;
+  }
+
+  // Display the card's UID
+  Serial.print("Card UID: ");
+  for (byte i = 0; i < rfid.uid.size; i++) {
+    Serial.print(rfid.uid.uidByte[i] < 0x10 ? "0" : ""); // Add leading zero if necessary
+    Serial.print(rfid.uid.uidByte[i], HEX); // Print UID in hexadecimal
+    if (i < rfid.uid.size - 1) Serial.print(":");
+  }
+  Serial.println();
+
+  // Halt communication with the card
+  rfid.PICC_HaltA();
+
+  // Add a small delay to avoid flooding the Serial Monitor
+  delay(1000);
+}
