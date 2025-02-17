@@ -11,19 +11,19 @@ The **ESP32 RFID Attendance Logger** is an automated system that records attenda
 ## 3. Components Used
 
 ### **Hardware Components**
-- 🛠 **ESP32 Development Board** – A microcontroller with built-in WiFi and Bluetooth.
-- 📡 **RFID-RC522 Module** – Reads RFID tag information.
-- 🔖 **RFID Tags** – Unique IDs assigned to individuals.
-- 🔌 **Power Supply** – 5V 2A recommended.
+-  **ESP32 Development Board** – A microcontroller with built-in WiFi and Bluetooth.
+-  **RFID-RC522 Module** – Reads RFID tag information.
+-  **RFID Tags** – Unique IDs assigned to individuals.
+-  **Power Supply** – 5V 2A recommended.
 
 ![ESP32 RFID Attendance Logger](https://ibb.co/tVZP84z)
 
 
 ### **Software Components**
-- 🖥 **Arduino IDE** – For coding and uploading to ESP32.
-- 🌐 **Google Apps Script** – Connects ESP32 to Google Sheets.
-- 📊 **Google Sheets** – Stores attendance records.
-- 📚 **Libraries Used**:
+-  **Arduino IDE** – For coding and uploading to ESP32.
+-  **Google Apps Script** – Connects ESP32 to Google Sheets.
+-  **Google Sheets** – Stores attendance records.
+-  **Libraries Used**:
   - `WiFi.h` (WiFi connectivity)
   - `HTTPClient.h` (HTTP communication)
   - `MFRC522.h` (RFID handling)
@@ -60,9 +60,9 @@ https://github.com/jagrutiii/attendencelogger/tree/main
 
 | **Challenge**                 | **Solution**                                         |
 |--------------------------------|-----------------------------------------------------|
-| 📶 **WiFi Connectivity Issues** | Ensure a stable internet connection and reliable power source. |
-| 🆔 **RFID Read Errors**         | Use high-quality RFID tags and maintain proper reader distance. |
-| 🔄 **Data Loss**                | Implement data retry mechanisms to prevent missing entries. |
+|  **WiFi Connectivity Issues** | Ensure a stable internet connection and reliable power source. |
+|  **RFID Read Errors**         | Use high-quality RFID tags and maintain proper reader distance. |
+|  **Data Loss**                | Implement data retry mechanisms to prevent missing entries. |
 
 ## 9. Conclusion
 The ESP32 RFID Attendance Logger is a reliable and cost-effective system for attendance tracking. It simplifies record-keeping and enhances security while utilizing cloud-based data storage.
