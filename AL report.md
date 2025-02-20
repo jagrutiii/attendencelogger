@@ -36,6 +36,7 @@ The system workflow:
 3. The ESP32 **sends the UID** to a **Google Apps Script** via **HTTP request**.
 4. The **script processes** the request and logs the data in **Google Sheets**.
 5. The response from **Google Sheets** is displayed on the **Serial Monitor**.
+![](https://i.imgur.com/M4ujgJ2.jpeg)
 
 ## 5. Working Principle
 1. **RFID Scanning**  
