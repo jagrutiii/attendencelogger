@@ -16,9 +16,6 @@ The **ESP32 RFID Attendance Logger** is an automated system that records attenda
 -  **RFID Tags** – Unique IDs assigned to individuals.
 -  **Power Supply** – 5V 2A recommended.
 
-![ESP32 RFID Attendance Logger](https://i.imgur.com/v8I3v5u.jpeg)
-
-
 ### **Software Components**
 -  **Arduino IDE** – For coding and uploading to ESP32.
 -  **Google Apps Script** – Connects ESP32 to Google Sheets.
@@ -47,6 +44,8 @@ The system workflow:
    - UID, timestamp, and user details are logged.
 4. **Response Handling**  
    - Serial monitor provides feedback.
+  ![ESP32 RFID Attendance Logger](https://i.imgur.com/v8I3v5u.jpeg)
+
 
 ## 6. Code Implementation and Google Apps Script
 https://github.com/jagrutiii/attendencelogger/tree/main
