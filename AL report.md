@@ -16,7 +16,7 @@ The **ESP32 RFID Attendance Logger** is an automated system that records attenda
 -  **RFID Tags** – Unique IDs assigned to individuals.
 -  **Power Supply** – 5V 2A recommended.
 
-![ESP32 RFID Attendance Logger](https://i.imgur.com/yaqqrJS.png)
+![ESP32 RFID Attendance Logger](https://i.imgur.com/v8I3v5u.jpeg)
 
 
 ### **Software Components**
